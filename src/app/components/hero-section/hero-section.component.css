@@ -1,0 +1,125 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 5% 5% 5%; 
+    gap: 20px;
+    color: white;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding-top: 20px;
+  }
+  
+  .hero-left {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .hero-left h1 {
+    font-size: 3rem; /* Responsive font size */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .hero-left p {
+    font-size: 1.125rem; /* Responsive font size */
+    margin-bottom: 20px;
+    padding-bottom: 10%;
+  }
+  .btn {
+    display: inline-block;
+    padding: 2.5% 8%;
+    font-size: 0.8rem; /* Responsive font size */
+    font-weight: 600;
+    color: #fff;
+    background-color: #1abb40;
+    border: 8px solid #1b4f56; /* Translucent green hue border */
+    border-radius: 55px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s  ;
+  }
+  
+  .btn:hover {
+    background-color: #1e7e34; /* Darker green background on hover */ 
+     
+  }
+  
+  
+  
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-right img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn {
+        padding: 2% 6%;
+    }
+  
+    .hero-left,
+    .hero-right {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .hero-left h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-left p {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 0.875rem;
+      padding: 8px 16px;
+    }
+  
+    .hero-right img {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero{
+        height: 80vh;
+    }
+    .btn {
+        padding: 4% 6%;
+    }
+    .hero-left h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-left p {
+      font-size: 0.875rem;
+    }
+  
+    .btn {
+      font-size: 0.75rem;
+      padding: 6px 12px;
+    }
+  
+    .hero-right img {
+      width: 100%;
+    }
+  }

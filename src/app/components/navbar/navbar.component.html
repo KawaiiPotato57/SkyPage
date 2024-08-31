@@ -1,0 +1,53 @@
+<header>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a routerLink="/" aria-label="Home">
+        <img
+          src="../../../assets/skyscrapers-logo.svg"
+          alt="Logo"
+          class="logo"
+        />
+      </a>
+      <div class="burger-menu" (click)="toggleMenu()" [class.open]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" [class.open]="isMenuOpen">
+        <li><a routerLink="/link1" class="nav-link">Home</a></li>
+        <li><a routerLink="/link2" class="nav-link">How it works</a></li>
+        <li>
+          <a routerLink="/link3" class="nav-link">Available Franchises</a>
+        </li>
+        <li><a routerLink="/link4" class="nav-link">Franchising Guide</a></li>
+        <li>
+          <a routerLink="/link5" class="nav-link" *ngIf="isMenuOpen"
+            >Apply for Franchise</a
+          >
+        </li>
+        <li>
+          <a routerLink="/link6" class="nav-link" *ngIf="isMenuOpen"
+            >Add your Franchise</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-right" *ngIf="!isMenuOpen || screenWidth >= 768">
+      <ul class="nav-links">
+        <li class="verticle-line">
+          <a routerLink="/link5" class="nav-link">Apply for Franchise</a>
+        </li>
+        <li><a routerLink="/link6" class="nav-link">Add your Franchise</a></li>
+      </ul>
+      <div class="profile-avatar">
+        <a (click)="toggleProfileMenu()" aria-label="Profile">
+          <img src="../../../assets/avatar.png" alt="Profile" />
+        </a>
+        <div class="profile-menu" *ngIf="isProfileMenuOpen">
+          <a routerLink="/login">Login</a>
+          <a routerLink="/signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
