@@ -6,7 +6,7 @@ import { Component, HostListener } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'], // Fixed typo: should be styleUrls
+  styleUrls: ['./navbar.component.css'],  
 })
 export class NavbarComponent {
   isMenuOpen = false;
@@ -33,7 +33,7 @@ export class NavbarComponent {
   onResize(event: Event) {
     this.screenWidth = (event.target as Window).innerWidth;
     if (this.screenWidth >= 1024) {
-      this.isMenuOpen = false; // Close the menu when resizing to larger screens
+      this.isMenuOpen = false;  
     }
   }
 
